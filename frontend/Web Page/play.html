@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Test</title>
+    </head>
+
+    <body>
+        <h1>This web page version allow us to have an Event Listener. Furthermore, we have a forms</h1>
+
+        <!-- Space to save the Nickname of our player -->
+
+        <!-- In the first lines we have 2 imporant things. The name of the place where the information will be sent and the method used to do it. In this case the method is get because we won't send any important information -->
+        <form action = "scoreboard" method= "get" id= "nickname-form ">
+
+            <!-- Div for the area where the user will add its information -->
+            <div>
+                <label for= "Nickname">Nickname</label>
+                <br>
+
+                <!-- In the next line we have a lot of useful attributes
+                    - type, id, name are the easy ones
+                    - placeholder shows an example text
+                    - required means the user can't submit the information without filling this area
+                    - oninvalid shows the text that I want
+                    - oninput clears the text once the information is submited   
+                -->
+                <input type= "text" id= "Nickname" name= "Nickname" placeholder = "My name is..." required oninvalid = "this.setCustomValidity('Please enter your Nickname!')" oninput="this.setCustomValidity('')">
+            
+            </div>
+
+        </form>
+
+        <br>
+        <!-- Here we have the container where any click will be saved. It has its own id, to identify it later on -->
+        <div id="key-container"></div>
+        <p>Press any key.</p>
+
+
+        <!-- With script we're able to call app.js, who is responsible for manage the hard features. Such as Event Listener -->   
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+#timeDisplayed{
+    font-size: 80px;
+    color: #40c437;
+    font-family: consolas, monospace;
+}
+
+#timmerContainer{
+    text-align: center;
+    border: 3px solid;
+    border-radius: 25px;
+    background-color: #222222;
+}
