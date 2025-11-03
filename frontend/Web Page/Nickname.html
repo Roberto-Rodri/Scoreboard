@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enter your Nickname</title>
+    </head>
+
+    <body>
+
+        <!-- Space to save the Nickname of our player -->
+
+        <!-- In the first lines we have 2 imporant things. 
+            The name of the place where the information will be sent and the method used to do it. 
+            In this case the method is get because we won't send any important information -->
+        <form action = "scoreboard" method= "get" id= "nickname-form ">
+
+            <!-- Div for the area where the user will add its information -->
+            <div>
+                <label for= "Nickname">Nickname</label>
+                <br>
+
+                <!--
+                    - placeholder shows an example text 
+                -->
+
+                <input type= "text" id= "Nickname" name= "Nickname" placeholder = "My name is...">
+            
+            </div>
+
+        </form>
+
+        <br>
+
+        <script src="Nickname.js"></script>
+
+    </body>
+</html>
