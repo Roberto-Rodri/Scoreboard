@@ -38,11 +38,19 @@ function stopTimer() {
     // Get the nickname we saved from the last page
     const nickname = localStorage.getItem('currentPlayer');
 
-    // HERE I HAVE TO save (nickname, finalTime) to MY database
-    console.log(`Saving score: ${nickname} with time: ${finalTime}`);
+    const formData = new FormData();
+    formData.append('nickname', nickname);
+    formData.append('finalTime', finalTime);
 
-    // Go back to the scoreboard
-    window.location.href = "Scores.html";
+    fetch('save-score.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        window.location.href = "Scores.php";
+    })
 }
 
 // Event Listener to stop the timer ---
