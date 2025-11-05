@@ -6,7 +6,7 @@ window.addEventListener('keydown', function(event) {
 
     // With this if we can choose when we will do something. For example, if 'a' is pressed then do...
     // Once I have access to the Red Button I'll CHANGE IT
-    if (event.key == 'a')
+    if (event.key == 'Enter')
     {
         // Prevent automatically refresh
         event.preventDefault();

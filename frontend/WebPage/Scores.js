@@ -5,7 +5,7 @@ console.log("Connected Files");
 window.addEventListener('keydown', function(event) {
 
     // With this if we can choose when we will do something. For example, if 'a' is pressed then do...
-    if (event.key == 'a')
+    if (event.key == 'Enter')
     {
         // Will change the current page to NIckname.html, where you can add your player information before starting
         window.location.href = "Nickname.html";

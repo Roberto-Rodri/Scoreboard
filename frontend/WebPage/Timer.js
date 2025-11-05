@@ -55,7 +55,7 @@ function stopTimer() {
 
 // Event Listener to stop the timer ---
 window.addEventListener('keydown', function(event) {
-    if (event.key === 'a') {
+    if (event.key === 'Enter') {
         event.preventDefault();
         stopTimer();
     }

@@ -1,3 +1,113 @@
+/* Used fonts */
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('vcr_osd_mono/VCR_OSD_MONO_1.001.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Among Us';
+  src: url('Among Us/Impostograph-REgular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Background */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+/* Text */
+
+#scoresTitle{
+    font-family: 'Among Us', monospace;
+    font-size: 72px;
+    margin-top: 2cm;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: white;
+
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+
+@keyframes move-image {
+    from {background-position: 0% 0%;}
+    to {background-position: 10000px 0%;}
+}
+
+@keyframes move-twinkle-back {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+#stars, #twinling{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    background: #000 url(stars.png) repeat top center;
+    z-index: 0;
+}
+
+#amongus1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  z-index: 2;
+  display: block;
+  transform: rotate(0deg);
+
+  background-image: url(amongus1.webp);
+  background-color: transparent;
+
+  background-size: contain; 
+  
+  background-position: 0% 0%;
+
+  animation: move-image 200s linear infinite;
+}
+
+#amongus2 {
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  z-index: 2;
+  display: block;
+  transform: rotate(0deg);
+
+  background-image: url(amongus2.webp);
+  background-color: transparent;
+
+  background-size: contain; 
+  
+  background-position: 0% 0%;
+
+  animation: move-image 200s linear infinite;
+}
+
+#twinling{
+    background: transparent url(twinkling.png) repeat top center;
+    z-index: 1;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
 /* Timmer style */
 
 #timeDisplayed{
@@ -12,3 +122,4 @@
     border-radius: 25px;
     background-color: #222222;
 }
+
